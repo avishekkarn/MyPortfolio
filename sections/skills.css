@@ -1,0 +1,95 @@
+/* Skills Section Styling */
+.skills {
+    padding: 50px 10%;
+    background: linear-gradient(to right, #f3f3f3, #ffffff);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center; /* Centers the text */
+    color: #161515;
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+/* Heading Underline Effect */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #2c271f, #161515);
+    margin: 10px auto; /* Ensures underline is centered */
+    border-radius: 2px;
+}
+
+/* Ensure the container is centered */
+.container {
+    text-align: center;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.skills-category h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Ensuring Consistent Item Size */
+.skill-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px; /* Initially slightly rounded */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+
+/* Image inside skill box */
+.skill-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 💡 Hover Effect: Transform to Circle */
+.skill-item:hover {
+    transform: scale(1.1);
+    border-radius: 50%; /* Makes it circular */
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15), -8px -8px 16px rgba(255, 255, 255, 0.6);
+}
+
+/* Optional: Add a slight floating effect */
+.skill-item:hover img {
+    transform: scale(1.1);
+}
+

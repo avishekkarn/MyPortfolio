@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Avishek Karn | Portfolio</title>
+
+        <meta name="description" content="Official portfolio of Avishek Karn - showcasing projects, skills, and achievements.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="sections/about.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="sections/skills.css">
+        <link rel="stylesheet" href="sections/projects.css">
+        <link rel="stylesheet" href="sections/blogs.css">
+
+
+
+    </head>
+    <body>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <div class="navbar-logo">
+                <span class="logo-text">Avishek</span>
+            </div>
+            <div class="navbar-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#blogs">Blogs</a>
+            </div>
+        </div>
+        <!-- main Section -->
+        <section class="main" id="home">
+            <div class="left-content">
+                <h2>Hi, I am</h2>
+                <h1 class="name-title">Avishek Karn</h1>
+                <p class="subtitle">Computer Science Engineer</p>
+                <p class="subtitle">Full-Stack Developer | Artificial Intelligence & Machine Learning Enthusiast</p>
+        
+                <!-- Social Icons -->
+                <div class="social-icons">
+                    <a href="https://www.hackerrank.com/profile/avishek_np09" target="_blank" rel="noopener noreferrer"><img src="images/hackerRank.png" alt="Email" ></a>
+                    <a href="https://github.com/avishekkarn" target="_blank" rel="noopener noreferrer"><img src="images/github-C7puX4yQ.png" alt="GitHub" ></a>
+                    <a href="https://www.linkedin.com/in/avishek-karn-3991b42b8" target="_blank" rel="noopener noreferrer">
+                        <img src="images/LinkedIn-CCuRkmeV.png" alt="LinkedIn">
+                    </a>
+                    
+                </div>
+        
+                <!-- Neumorphic Contact Button -->
+                <div class="contact-btn-container">
+                    <a href="#contact" class="contact-btn"><span>Get In Touch</span></a>
+                </div>
+            </div>
+        
+            <div class="right-content">
+                <img src="images/profile-img8.webp" alt="Profile Image" class="profile-img">
+            </div>
+        </section>
+        
+
+        <!-- CV Section -->
+        <footer>
+            <div class="cv-section">
+                <h3>Explore My CV</h3>
+                <p>Discover my skills, experience, and expertise in detail.</p>
+                <div class="cv-buttons">
+                    <a href="cv.pdf" target="_blank" class="cv-btn view-btn">👁️ View CV</a>
+                    <a href="cv.pdf" download="Avishek_Karn_CV.pdf" class="cv-btn download-btn">📥 Download CV</a>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+        <!-- About Me Section -->
+        <section class="about-me" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About Me</h2>
+                        <p>
+                            Hi, I'm Avishek Karn, a passionate Computer Science Engineer with a love for front-end 
+                            development and UI design. I enjoy creating visually stunning and interactive web experiences. 
+                            My goal is to merge aesthetics with functionality, delivering a seamless user experience.
+                        </p>
+                    </div>
+                    <div class="quote-box">
+                        <blockquote>“The only way to do great work is to love what you do.” – Steve Jobs</blockquote>
+                    </div>
+                </div>
+
+                <!-- Education Timeline -->
+                <div class="education">
+                    <h3 class="section-title">Education Journey</h3>
+                    <div class="timeline">
+                        <div class="timeline-item left hidden" data-type="school" onclick="openModal('school')">
+                            <div class="content">
+                                <h4>Mount Everest Sec. Boarding School, Nepal</h4>
+                                <p>Schooling (Up to Grade 10)</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item right hidden" data-type="college" onclick="openModal('college')">
+                            <div class="content">
+                                <h4>Triton International College, Nepal</h4>
+                                <p>Higher Secondary (+2 Science)</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item left hidden" data-type="university" onclick="openModal('university')">
+                            <div class="content">
+                                <h4>Noida International University, India</h4>
+                                <p>Bachelor's in Computer Science</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Popups for Education Details -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <img id="modal-image" src="" alt="Education Image" class="modal-image">
+            </div>
+        </div>
+
+       <!-- Interests & Hobbies -->
+        <div class="interests">
+            <h3 class="section-title">Interests & Hobbies</h3>
+            <div class="interests-container">
+                <div class="interest-item">Web Development</div>
+                <div class="interest-item">Cybersecurity</div>
+                <div class="interest-item">Machine Learning</div>
+                <div class="interest-item">Photography</div>
+                <div class="interest-item">Traveling</div>
+                <div class="interest-item">Poetry</div>
+            </div>
+        </div>
+
+        <!-- Certifications Showcase -->
+       <!-- Certifications Showcase -->
+        <div class="certifications">
+            <h3 class="section-title">Certifications</h3>
+
+           <!-- Scroll Buttons -->
+            <button class="scroll-btn left-btn" onclick="scrollCertificates(-1)">
+                <i class="fas fa-chevron-left"></i> 
+            </button>
+            <button class="scroll-btn right-btn" onclick="scrollCertificates(1)">
+                <i class="fas fa-chevron-right"></i> 
+            </button>
+
+
+            <div class="certificates-wrapper" id="certificates-container">
+                <div class="certificate" onclick="openCertificate('../images/certificate1.png')">
+                    <img src="../images/certificate1.png" alt="Full-Stack Web Development">
+                    <p>Full-Stack Web Development</p>
+                </div>
+                <div class="certificate" onclick="openCertificate('../images/certificate2.jpg')">
+                    <img src="../images/certificate2.jpg" alt="Advanced JavaScript & React">
+                    <p>Advanced JavaScript & React</p>
+                </div>
+                <div class="certificate" onclick="openCertificate('../images/certificate3.png')">
+                    <img src="../images/certificate4.jpeg" alt="Cybersecurity Fundamentals">
+                    <p>Cybersecurity Fundamentals</p>
+                </div>
+                <div class="certificate" onclick="openCertificate('../images/certificate4.jpeg')">
+                    <img src="../images/certificate2.jpg" alt="Machine Learning Basics">
+                    <p>Machine Learning Basics</p>
+                </div>
+                <div class="certificate" onclick="openCertificate('../images/certificate5.png')">
+                    <img src="../images/certificate2.jpg" alt="Data Structures & Algorithms">
+                    <p>Data Structures & Algorithms</p>
+                </div>
+                <div class="certificate" onclick="openCertificate('../images/certificate6.png')">
+                    <img src="../images/certificate2.jpg" alt="UI/UX Design Certification">
+                    <p>UI/UX Design Certification</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Certificate Popup Modal -->
+        <div id="certificate-modal" class="modal" onclick="closeCertificate()">
+            <div class="modal-content">
+                <span class="close" onclick="closeCertificate()">&times;</span>
+                <img id="certificate-img" src="" alt="Certificate Preview">
+            </div>
+        </div>
+
+
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-container">
+                <!-- Using Now -->
+                <div class="skills-category">
+                    <h3>Using Now:</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><img src="images/html.png" alt="HTML5">HTML5</div>
+                        <div class="skill-item"><img src="images/css.png" alt="CSS3">CSS3</div>
+                        <div class="skill-item"><img src="images/js.png" alt="JavaScript">JavaScript</div>
+                        <div class="skill-item"><img src="images/node.png" alt="Node.js">Node.js</div>
+                        <div class="skill-item"><img src="images/next.png" alt="Next.js">Next.js</div>
+                        <div class="skill-item"><img src="images/react.png" alt="React">React</div>
+                        <div class="skill-item"><img src="images/aws.png" alt="AWS">AWS</div>
+                        <div class="skill-item"><img src="images/git.png" alt="Git">Git</div>
+                        <div class="skill-item"><img src="images/github.png" alt="GitHub">GitHub</div>
+                        <div class="skill-item"><img src="images/figma.png" alt="Figma">Figma</div>
+                    </div>
+                </div>
+
+                <!-- Currently Learning -->
+                <div class="skills-category">
+                    <h3>Currently Learning:</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><img src="images/typescript.png" alt="TypeScript">TypeScript</div>                      
+                        <div class="skill-item"><img src="images/vue.png" alt="Vue.js">Vue.js</div>
+                        <div class="skill-item"><img src="images/firebase.png" alt="Firebase">Firebase</div>
+                        <div class="skill-item"><img src="images/docker.png" alt="Docker">Docker</div>
+                        <div class="skill-item"><img src="images/kubernetes.png" alt="Kubernetes">Kubernetes</div>
+                        <div class="skill-item"><img src="images/bootstrap.png" alt="Bootstrap">Bootstrap</div>
+                        <div class="skill-item"><img src="images/tailwind.png" alt="Tailwind">Tailwind</div>
+                        <div class="skill-item"><img src="images/sass.png" alt="SASS">SASS</div>                        
+                        <div class="skill-item"><img src="images/express.png" alt="Express.js">Express.js</div>
+                        <div class="skill-item"><img src="images/mysql.png" alt="MySQL">MySQL</div>
+                        <div class="skill-item"><img src="images/mongodb.png" alt="MongoDB">MongoDB</div>
+                    </div>
+                </div>
+
+                <!-- Other Key Skills -->
+                <div class="skills-category">
+                    <h3>Other Key Skills:</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><img src="images/data.png" alt="DSA">Data Structures & Algorithms</div>
+                        <div class="skill-item"><img src="images/python.png" alt="Python">Python</div>
+                        <div class="skill-item"><img src="images/c++.png" alt="C++">C++</div>
+                        <div class="skill-item"><img src="images/c.png" alt="C">C</div>
+                        <div class="skill-item"><img src="images/cyber.png" alt="Cybersecurity">Cybersecurity</div>
+                        <div class="skill-item"><img src="images/desgin.png" alt="UI/UX">UI/UX Design</div>
+                        <div class="skill-item"><img src="images/postman.png" alt="Postman">Postman</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- sections/projects.html -->
+        <section class="projects" id="projects">
+            <h2 class="section-title">Projects</h2>
+            
+            <!-- Featured Projects (Manually added with live links) -->
+            <div class="featured-projects">
+                <div class="project-card">
+                    <img src="images/p1.jpg" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A sleek personal portfolio showcasing my skills, projects, and blog posts.</p>
+                        <a href="https://your-live-link.com" target="_blank" class="btn">Live Demo</a>
+                        <a href="https://github.com/avishekkarn/portfolio" target="_blank" class="btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- GitHub Projects (Fetched Dynamically) -->
+            <div class="github-projects">
+                <h3>All GitHub Projects</h3>
+                <div id="github-projects-container" class="projects-grid"></div>
+            </div>
+        </section>
+
+
+
+        <section class="blogs" id="blogs">
+            <h2 class="section-title">Blogs</h2>
+            <div id="blog-container" class="blog-grid"></div>
+        
+            <!-- Blog Modal (For Full Blog View) -->
+            <div id="blog-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeBlogModal()">&times;</span>
+                    <img id="modal-thumbnail" src="" alt="Blog Thumbnail" class="modal-thumbnail">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-description"></p>
+                    <a id="modal-link" href="#" target="_blank" class="btn read-more">Read Full Blog</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get in Touch Section -->
+        <section id="contact" class="contact-section">
+            <h2>Get <span>in Touch.</span></h2>
+            <p>So that we can talk more about...</p>
+        
+            <!-- Social Media Icons -->
+            <div class="social-icons" id="buttom">
+                <a href="https://www.facebook.com/profile.php?id=100011374461980" target="_blank" rel="noopener noreferrer"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/avishek_1584/" target="_blank" rel="noopener noreferrer"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://mail.google.com/mail/?view=cm&to=avishek.np09@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <img src="images/email.png" alt="Email">
+                </a>
+                <a href="https://wa.me/9779825731584?text=Hello%20Avishek!" target="_blank" rel="noopener noreferrer">
+                    <img src="images/whatsapp.png" alt="WhatsApp">
+                </a>
+                                   
+                <a href="https://discord.gg/X4bNkdjC" target="_blank" rel="noopener noreferrer">
+                    <img src="images/discord.png" alt="Discord">
+                </a>
+            </div>
+        
+            <!-- Contact Form -->
+            <form class="contact-form" id="contact-form">
+                <div class="input-box">
+                    <input type="text" id="name" name="user_name" required placeholder="Your Name">
+                </div>
+                <div class="input-box">
+                    <input type="email" id="email" name="user_email" required placeholder="Your Email">
+                </div>
+                <div class="input-box">
+                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+        </section>
+        
+
+
+        <footer class="footer">
+            <div class="footer-content">
+                <h2>Thank You for Visiting!</h2>
+                <p>This portfolio represents <strong>Avishek Karn</strong>, showcasing skills, projects, and insights.</p>
+                <p>Let's connect and build something amazing together.</p>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> Avishek Karn. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+
+
+        
+        <script>
+            // Automatically update year
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+ 
+        <!-- Include Blog JavaScript -->
+        <script src="sections/blogs.js" defer></script>
+        
+        <script src="index.js" defer></script>
+        <script src="sections/about.js" defer></script>
+        <script src="sections/skills.js" defer></script>
+        <!-- Include JavaScript for fetching GitHub projects -->
+        <script src="sections/projects.js" defer></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" async></script>
+
+        
+    </body>
+</html>

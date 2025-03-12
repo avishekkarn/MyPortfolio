@@ -1,0 +1,127 @@
+/* Blog Section */
+.blogs {
+    padding: 50px 10%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Blog Grid Layout */
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Blog Card Styling */
+.blog-card {
+    width: 350px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Thumbnail Image */
+.blog-thumbnail {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Blog Content */
+.blog-content {
+    padding: 15px;
+}
+
+.blog-content h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.blog-content p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Read More Button */
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out;
+}
+
+.read-more:hover {
+    background-color: #f39c12;
+}
+
+/* Blog Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    max-width: 600px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* Show Modal Effect */
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Thumbnail inside Modal */
+.modal-thumbnail {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: black;
+}
