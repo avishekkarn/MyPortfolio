@@ -3,45 +3,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const blogs = [
         {
-            title: "Understanding JavaScript Closures",
-            description: "A deep dive into closures in JavaScript and their practical applications.",
-            link: "https://medium.com/some-js-closure-article",
-            thumbnail: "../images/p2.jpg",
+            title: "The Chance Encounter with a Stranger",
+            description: "A deep dive into my personal story, experience.",
+            link: "https://medium.com/@avishek.np09/the-chance-encounter-with-a-stranger-97708a738b3a",
+            thumbnail: "../images/p2.png",
             author: "Avishek Karn",
-            date: "March 2025"
+            date: "March 1, 2024"
         },
-        {
-            title: "Cybersecurity Best Practices",
-            description: "Protect your online presence with essential security tips.",
-            link: "https://cybersecurity.com/secure-your-data",
-            thumbnail: "../images/p3.jpg",
-            author: "John Doe",
-            date: "February 2025"
-        },
-        {
-            title: "Data Structures & Algorithms Guide",
-            description: "Learn DSA concepts with real-world examples.",
-            link: "files/DSA-Guide.pdf",
-            thumbnail: "../images/p4.jpg",
-            author: "Avishek Karn",
-            date: "January 2025"
-        },
-        {
-            title: "Web Development Trends 2025",
-            description: "A look into the future of web development and emerging technologies.",
-            link: "https://dev.to/web-trends",
-            thumbnail: "../images/p5.jpg",
-            author: "Jane Smith",
-            date: "April 2025"
-        },
-        {
-            title: "How to Optimize React Performance",
-            description: "Techniques and best practices to speed up React applications.",
-            link: "https://github.com/avishekkarn/react-optimization",
-            thumbnail: "../images/p6.jpg",
-            author: "Avishek Karn",
-            date: "May 2025"
-        }
+        // {
+        //     title: "Cybersecurity Best Practices",
+        //     description: "Protect your online presence with essential security tips.",
+        //     link: "https://cybersecurity.com/secure-your-data",
+        //     thumbnail: "../images/p3.jpg",
+        //     author: "John Doe",
+        //     date: "February 2025"
+        // },
+        // {
+        //     title: "Data Structures & Algorithms Guide",
+        //     description: "Learn DSA concepts with real-world examples.",
+        //     link: "files/DSA-Guide.pdf",
+        //     thumbnail: "../images/p4.jpg",
+        //     author: "Avishek Karn",
+        //     date: "January 2025"
+        // },
+        // {
+        //     title: "Web Development Trends 2025",
+        //     description: "A look into the future of web development and emerging technologies.",
+        //     link: "https://dev.to/web-trends",
+        //     thumbnail: "../images/p5.jpg",
+        //     author: "Jane Smith",
+        //     date: "April 2025"
+        // },
+        // {
+        //     title: "How to Optimize React Performance",
+        //     description: "Techniques and best practices to speed up React applications.",
+        //     link: "https://github.com/avishekkarn/react-optimization",
+        //     thumbnail: "../images/p6.jpg",
+        //     author: "Avishek Karn",
+        //     date: "May 2025"
+        // }
     ];
 
     // **Clear existing blogs**
