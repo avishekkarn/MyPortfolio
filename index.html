@@ -73,8 +73,8 @@
                 <h3>Explore My CV</h3>
                 <p>Discover my skills, experience, and expertise in detail.</p>
                 <div class="cv-buttons">
-                    <a href="cv.pdf" target="_blank" class="cv-btn view-btn">👁️ View CV</a>
-                    <a href="cv.pdf" download="Avishek_Karn_CV.pdf" class="cv-btn download-btn">📥 Download CV</a>
+                    <a href="Resume-Avishek_organized.pdf" target="_blank" class="cv-btn view-btn">👁️ View CV</a>
+                    <a href="Resume-Avishek_organized.pdf" download="Avishek_Karn_CV.pdf" class="cv-btn download-btn">📥 Download CV</a>
                 </div>
             </div>
         </footer>
@@ -106,19 +106,19 @@
                         <div class="timeline-item left hidden" data-type="school" onclick="openModal('school')">
                             <div class="content">
                                 <h4>Mount Everest Sec. Boarding School, Nepal</h4>
-                                <p>Schooling (Up to Grade 10)</p>
+                                <p>Schooling (Up to Grade 10)    <strong>See More...</strong></p>
                             </div>
                         </div>
                         <div class="timeline-item right hidden" data-type="college" onclick="openModal('college')">
                             <div class="content">
                                 <h4>Triton International College, Nepal</h4>
-                                <p>Higher Secondary (+2 Science)</p>
+                                <p>Higher Secondary (+2 Science)  <strong>See More...</strong></p>
                             </div>
                         </div>
                         <div class="timeline-item left hidden" data-type="university" onclick="openModal('university')">
                             <div class="content">
                                 <h4>Noida International University, India</h4>
-                                <p>Bachelor's in Computer Science</p>
+                                <p>Bachelor's in Computer Science  <strong>See More...</strong></p>
                             </div>
                         </div>
                     </div>
@@ -133,6 +133,7 @@
                 <h2 id="modal-title"></h2>
                 <p id="modal-description"></p>
                 <img id="modal-image" src="" alt="Education Image" class="modal-image">
+                <div id="modal-extra-details"></div>  <!-- 🔥 New: Extra Details Section -->
             </div>
         </div>
 
@@ -141,9 +142,9 @@
             <h3 class="section-title">Interests & Hobbies</h3>
             <div class="interests-container">
                 <div class="interest-item">Web Development</div>
-                <div class="interest-item">Cybersecurity</div>
                 <div class="interest-item">Machine Learning</div>
-                <div class="interest-item">Photography</div>
+                <div class="interest-item">Cybersecurity</div>
+                <div class="interest-item">Physics and Biology</div>
                 <div class="interest-item">Traveling</div>
                 <div class="interest-item">Poetry</div>
             </div>
@@ -164,31 +165,26 @@
 
 
             <div class="certificates-wrapper" id="certificates-container">
-                <div class="certificate" onclick="openCertificate('../images/certificate1.png')">
-                    <img src="../images/certificate1.png" alt="Full-Stack Web Development">
-                    <p>Full-Stack Web Development</p>
+                <div class="certificate" onclick="openCertificate('certificate5.png')">
+                    <img src="certificate5.png" alt="Responsive Web Design">
+                    <p>Responsive Web Design</p>
                 </div>
-                <div class="certificate" onclick="openCertificate('../images/certificate2.jpg')">
-                    <img src="../images/certificate2.jpg" alt="Advanced JavaScript & React">
-                    <p>Advanced JavaScript & React</p>
+                <div class="certificate" onclick="openCertificate('certificate2.jpg')">
+                    <img src="certificate2.jpg" alt="Python">
+                    <p>Python</p>
                 </div>
-                <div class="certificate" onclick="openCertificate('../images/certificate3.png')">
-                    <img src="../images/certificate4.jpeg" alt="Cybersecurity Fundamentals">
+                <div class="certificate" onclick="openCertificate('certificate3.png')"> <!-- Fixed file extension -->
+                    <img src="certificate3.png" alt="Cybersecurity Fundamentals">
                     <p>Cybersecurity Fundamentals</p>
                 </div>
-                <div class="certificate" onclick="openCertificate('../images/certificate4.jpeg')">
-                    <img src="../images/certificate2.jpg" alt="Machine Learning Basics">
-                    <p>Machine Learning Basics</p>
-                </div>
-                <div class="certificate" onclick="openCertificate('../images/certificate5.png')">
-                    <img src="../images/certificate2.jpg" alt="Data Structures & Algorithms">
-                    <p>Data Structures & Algorithms</p>
-                </div>
-                <div class="certificate" onclick="openCertificate('../images/certificate6.png')">
-                    <img src="../images/certificate2.jpg" alt="UI/UX Design Certification">
-                    <p>UI/UX Design Certification</p>
+                <div class="certificate" onclick="openCertificate('certificate1.jpg')"> <!-- Fixed mismatch -->
+                    <img src="certificate1.jpg" alt="Problem Solving">
+                    <p>Problem Solving</p>
                 </div>
             </div>
+            
+            
+            
         </div>
 
 
@@ -265,7 +261,7 @@
         <section class="projects" id="projects">
             <h2 class="section-title">Projects</h2>
             
-            <!-- Featured Projects (Manually added with live links) -->
+            <!-- Featured Projects (Manually added with live links)
             <div class="featured-projects">
                 <div class="project-card">
                     <img src="images/p1.jpg" alt="Project 1">
@@ -276,7 +272,7 @@
                         <a href="https://github.com/avishekkarn/portfolio" target="_blank" class="btn">GitHub</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             
             <!-- GitHub Projects (Fetched Dynamically) -->
             <div class="github-projects">

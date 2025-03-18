@@ -25,6 +25,12 @@ window.addEventListener("load", async function () {
             return;
         }
 
+        // 🔥 Manually specify deployment links (fixing name mismatch)
+        const deployedProjects = {
+            "utopia": "https://utopia-avishek-karns-projects.vercel.app/",
+            "myportfolio": "https://my-portfolio-avishek-karns-projects.vercel.app/"  // Fix name matching
+        };
+
         let projectHTML = "";
         repos.forEach(repo => {
             const { name, description, html_url, homepage, topics, pushed_at } = repo;
@@ -32,6 +38,15 @@ window.addEventListener("load", async function () {
             const formattedDate = new Date(pushed_at).toLocaleDateString("en-US", {
                 year: "numeric", month: "long", day: "numeric"
             });
+
+            // 🌐 Fix project name matching by converting to lowercase and removing spaces
+            let repoKey = name.toLowerCase().replace(/\s+/g, ""); // Normalize names
+            let liveDemoLink = deployedProjects[repoKey] || homepage || "";
+
+            // Ensure homepage is a valid URL
+            if (liveDemoLink && !liveDemoLink.startsWith("http")) {
+                liveDemoLink = "https://" + liveDemoLink;
+            }
 
             projectHTML += `
                 <div class="project-card">
@@ -42,7 +57,7 @@ window.addEventListener("load", async function () {
                         <p><strong>Topics:</strong> ${topics.length ? topics.join(", ") : "None"}</p>
                         <div class="project-links">
                             <a href="${html_url}" target="_blank" class="github-link">🔗 GitHub</a>
-                            ${homepage ? `<a href="${homepage}" target="_blank" class="demo-link">🚀 Live Demo</a>` : ""}
+                            ${liveDemoLink ? `<a href="${liveDemoLink}" target="_blank" class="demo-link">🚀 Live Demo</a>` : ""}
                         </div>
                     </div>
                 </div>

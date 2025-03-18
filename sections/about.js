@@ -16,30 +16,80 @@ document.addEventListener("DOMContentLoaded", function () {
         const title = document.getElementById("modal-title");
         const description = document.getElementById("modal-description");
         const image = document.getElementById("modal-image");
+        const extraDetails = document.getElementById("modal-extra-details"); // 🆕 Extra details container
 
         const details = {
             school: {
                 title: "Mount Everest Sec. Boarding School",
                 description: "A strong academic foundation built here.",
-                image: "../images/school1.jpg"
+                image: "../images/school1.jpg",
+                location: "Siraha, Nepal",
+                modeOfInstruction: "English",
+                yearsAttended: "2007 - 2019",
+                gpa: "3.5 / 4.0",
+                achievements: [
+                    "Ranked among the top 5 students in the district board exams.",
+                    "Active member of the Science & Robotics Club.",
+                    "Winner of the Interschool Mathematics Olympiad."
+                ]
             },
             college: {
                 title: "Triton International College",
                 description: "Focused on Science and Technology, preparing for university.",
-                image: "../images/triton1.jpg"
+                image: "../images/triton1.jpg",
+                location: "Kathmandu, Nepal",
+                modeOfInstruction: "English",
+                yearsAttended: "2019 - 2021",
+                gpa: "3.05 / 4.0",
+                major: "Science (Physics, Chemistry, Mathematics, Computer Science, Biology)",
+                achievements: [
+                    "Top performer in Physics and Mathematics.",,
+                    "Active Member of Sports and Scientific Clubs",
+                    "Researched and Worked on Sprituality during Covid Lockdown"
+
+                ]
             },
             university: {
                 title: "Noida International University",
                 description: "Advanced studies in Computer Science, specializing in front-end development.",
-                image: "../images/noida.jpg"
+                image: "../images/noida.jpg",
+                location: "Greater Noida, India",
+                modeOfInstruction: "English",
+                yearsAttended: "2024 - Present",
+                gpa: "7.70 / 10",
+                major: "Computer Science & Engineering",
+                minor: "Artificial Intelligence & Machine Learning",
+                achievements: [
+                    "Developed a working Health Assistance AI chatbot as a college project.",
+                    "Building a real-time Human Resources platform as a university project.",
+                    "learning all the essentials skills"
+                ]
             }
         };
 
         if (details[type]) {
-            title.textContent = details[type].title;
-            description.textContent = details[type].description;
-            image.src = details[type].image;
-            
+            const edu = details[type];
+
+            // ✅ Update Basic Information
+            title.textContent = edu.title;
+            description.textContent = edu.description;
+            image.src = edu.image;
+
+            // ✅ Update Extra Details
+            extraDetails.innerHTML = `
+                <p><strong> Location:</strong> ${edu.location}</p>
+                <p><strong> Mode of Instruction:</strong> ${edu.modeOfInstruction}</p>
+                <p><strong> Years Attended:</strong> ${edu.yearsAttended}</p>
+                <p><strong> GPA:</strong> ${edu.gpa}</p>
+                ${edu.major ? `<p><strong> Major:</strong> ${edu.major}</p>` : ""}
+                ${edu.minor ? `<p><strong> Minor:</strong> ${edu.minor}</p>` : ""}
+                <p><strong> Achievements:</strong></p>
+                <ul>
+                    ${edu.achievements.map(achieve => `${achieve}<br>`).join("")}
+                </ul>
+            `;
+
+            // ✅ Show Modal with Smooth Animation
             modal.style.display = "flex";
             setTimeout(() => {
                 modal.classList.add("show-popup");
@@ -58,28 +108,49 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 300);
     };
 
+
     // 🏆 Open Certificate Preview
     window.openCertificate = function (imageSrc) {
         const modal = document.getElementById("certificate-modal");
         const img = document.getElementById("certificate-img");
 
-        img.src = imageSrc;
-        modal.style.display = "flex";
-        setTimeout(() => {
-            modal.classList.add("show-popup");
-            modal.style.opacity = "1";
-        }, 50);
+        if (!modal || !img) {
+            console.error("❌ ERROR: Modal or Image element not found!");
+            return;
+        }
+
+        // Ensure the path correctly points to the root folder
+        let fixedSrc = imageSrc.startsWith("/") ? imageSrc : `/${imageSrc.split('/').pop()}`;
+
+        console.log("📸 Opening Certificate:", fixedSrc);
+
+        img.onload = function () { 
+            modal.style.display = "flex";
+            setTimeout(() => {
+                modal.classList.add("show-popup");
+                modal.style.opacity = "1";
+            }, 50);
+        };
+
+        img.onerror = function () {
+            console.error("⚠ ERROR: Image failed to load:", fixedSrc);
+        };
+
+        img.src = fixedSrc;
     };
 
-    // ❌ Close Certificate Preview
+    // 🏆 Close Certificate Preview
     window.closeCertificate = function () {
         const modal = document.getElementById("certificate-modal");
-        modal.classList.remove("show-popup");
-        modal.style.opacity = "0";
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 300);
+        if (modal) {
+            modal.classList.remove("show-popup");
+            setTimeout(() => {
+                modal.style.opacity = "0";
+                modal.style.display = "none";
+            }, 500);
+        }
     };
+
 
     // 🛑 Close modals when clicking outside
     document.querySelectorAll(".modal").forEach(modal => {
