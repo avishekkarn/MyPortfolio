@@ -121,3 +121,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.createElement("div");
+    hamburger.classList.add("hamburger");
+    hamburger.innerHTML = `
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    `;
+
+    const mobileNav = document.createElement("div");
+    mobileNav.classList.add("mobile-nav");
+    mobileNav.innerHTML = `
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#blogs">Blogs</a>
+    `;
+
+    document.body.appendChild(hamburger);
+    document.body.appendChild(mobileNav);
+
+    // Ensure click event works
+    hamburger.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent clicks from being blocked
+        hamburger.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!hamburger.contains(event.target) && !mobileNav.contains(event.target)) {
+            hamburger.classList.remove("active");
+            mobileNav.classList.remove("active");
+        }
+    });
+});
+
+
+
+
+

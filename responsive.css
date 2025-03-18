@@ -1,0 +1,367 @@
+/* 🌟 Responsive Styles for Mobile Screens */
+@media screen and (max-width: 768px) {
+
+    /* ✅ Make Sure Everything Stays Within Viewport */
+    html, body {
+        overflow-x: hidden;  /* Prevent horizontal scrolling */
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    /* ✅ Remove Extra Margins & Ensure Full-Width Sections */
+    section, .main, .cv-section, .about-me, .education {
+        width: 100vw;  
+        max-width: 100vw;
+        padding: 30px 5%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    /* ✅ Ensure Container Fits Properly */
+    .container {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    /* ✅ Navbar Adjustments */
+    .navbar {
+        width: 100vw;
+        max-width: 100vw;
+        padding: 15px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: rgba(34, 34, 34, 0.9);
+    }
+
+    /* ✅ Hide Default Navbar Links */
+    .navbar-links {
+        display: none;
+    }
+
+    /* ✅ Hamburger Menu */
+    /* ✅ Default Hamburger Button */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        position: fixed;
+        top: 3px;
+        right: 5px;
+        z-index: 1100;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* ✅ Hamburger Bars */
+    .hamburger .bar {
+        width: 30px;
+        height: 4px;
+        background: white;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    /* ✅ Transform Hamburger to Cross */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0; /* Hide middle bar */
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+
+    .hamburger .bar {
+        width: 30px;
+        height: 4px;
+        background: white;
+        transition: 0.3s;
+    }
+
+    /* ✅ Mobile Navigation Panel */
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-in-out;
+        z-index: 1050;
+    }
+
+    /* ✅ Show Menu When Active */
+    .mobile-nav.active {
+        transform: translateY(0);
+    }
+
+    /* ✅ Mobile Nav Links */
+    .mobile-nav a {
+        color: white;
+        font-size: 1.8em;
+        text-decoration: none;
+        padding: 15px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    /* ✅ One-by-One Link Animation */
+    .mobile-nav.active a:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+    .mobile-nav.active a:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+    .mobile-nav.active a:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+    .mobile-nav.active a:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+    .mobile-nav.active a:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+
+    /* ✅ Ensure Main Section is Full Width */
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    /* ✅ Fix Left & Right Sections */
+    .left-content, .right-content {
+        width: 100vw;
+        text-align: center;
+        clip-path: none;
+    }
+
+    .profile-img {
+        
+        width: 40%;
+        max-width: 350px;
+    }
+
+    /* ✅ Reduce CV Section Height */
+    .cv-section {
+        height: auto;  /* Make height adjust dynamically */
+        padding: 15px 20px;  /* Reduce top & bottom padding */
+        text-align: center;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    /* ✅ Ensure Buttons Stay in Place */
+    .cv-buttons {
+        display: flex;
+        flex-direction: row; /* Stack buttons vertically */
+        align-items: center;
+        gap: 8px; /* Reduce space between buttons */
+    }
+
+    /* ✅ Adjust Button Styling */
+    .cv-btn {
+        padding: 10px 20px; /* Reduce padding */
+        font-size: 14px; /* Slightly reduce text size */
+    }
+
+
+    /* ✅ About Me Section */
+    /* ✅ Fix About Me Section */
+    .about-me {
+        width: 100%;
+        max-width: 100vw;
+        padding: 30px 5%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .about-text {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .about-text h2 {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .about-text p {
+        font-size: 1em;
+        line-height: 1.5;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    /* ✅ Fix Timeline Layout to Prevent Overflow */
+    /* ✅ Fix Timeline Layout - Ensure a Perfect Single Column */
+    .education {
+        text-align: center;
+        padding: 0;
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    /* ✅ Force Timeline into a Single Column */
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        max-width: 100vw;
+        padding: 0;
+    }
+
+    /* ✅ Remove the Center Vertical Line */
+    .timeline::before {
+        display: none;
+    }
+
+    /* ✅ Ensure Timeline Items Are Centered */
+    .timeline-item {
+        width: 85%;  /* Make sure they fit the screen */
+        text-align: center;
+        margin: 15px auto;
+        position: relative;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    /* ✅ Remove Left & Right Offsets for Proper Center Alignment */
+    .timeline-item.left, 
+    .timeline-item.right {
+        left: 0 !important;   /* Remove any shifting */
+        transform: none !important;
+    }
+
+    /* ✅ Position Circle Indicators in the Center */
+    .timeline-item::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* ✅ Remove Timeline Circles on Mobile */
+    .timeline-item::before {
+        display: none !important;  /* Hides the circles */
+    }
+
+
+    /* ✅ Ensure Certifications Section Fits Screen */
+    .certifications {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+    }
+
+    /* ✅ Ensure Wrapper Does Not Overflow */
+    .certificates-wrapper {
+        display: flex;
+        overflow-x: auto; /* Allow horizontal scroll */
+        scroll-behavior: smooth;
+        padding: 10px 5%;
+        gap: 15px;
+        scrollbar-width: none; /* Hide scrollbar */
+    }
+
+    /* ✅ Ensure Buttons Are Visible */
+    .scroll-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.3);
+        color: black;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 18px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        z-index: 10;  /* Make sure buttons are on top */
+    }
+
+    /* ✅ Positioning Left & Right Scroll Buttons */
+    .left-btn {
+        left: 5px; /* Move button closer to certificates */
+    }
+
+    .right-btn {
+        right: 5px; /* Move button closer to certificates */
+    }
+
+    /* ✅ Ensure Buttons Remain Clickable */
+    .scroll-btn:active {
+        transform: scale(0.95);
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ✅ Fix Certificate Preview Modal */
+    #certificate-modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: -100px;
+        top: -100px;
+        width: 150%;
+        height: 150%;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px; /* Prevent overflow */
+    }
+
+    /* ✅ Ensure Modal Content Scales on Mobile */
+    #certificate-modal .modal-content {
+        background: white;
+        padding: 5px;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+    }
+
+    /* ✅ Ensure Certificate Image Scales Correctly */
+    #certificate-modal img {
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        border-radius: 5px;
+    }
+
+    /* ✅ Adjust Close Button */
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+        color: black;
+        cursor: pointer;
+    }
+
+
+
+}

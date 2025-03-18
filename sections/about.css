@@ -25,7 +25,7 @@
     line-height: 1.6;
 }
 
-.quote-box {
+/* .quote-box {
     background: #222;
     color: #fff;
     padding: 20px;
@@ -33,7 +33,7 @@
     border-radius: 10px;
     font-size: 1.2em;
     font-style: italic;
-}
+} */
 
 /* Education Timeline */
 .education {
@@ -233,7 +233,7 @@
 .section-title::after {
     content: "";
     display: block;
-    width: 80px;
+    width: 70px;
     height: 4px;
     background: linear-gradient(to right, #2c271f, #161515);
     margin: 10px auto; /* Ensures underline is centered */
