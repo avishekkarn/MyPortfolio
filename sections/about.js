@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 major: "Computer Science & Engineering",
                 minor: "Artificial Intelligence & Machine Learning",
                 achievements: [
-                    "Developed a working Health Assistance AI chatbot as a college project.",
+                    "Developing a working Health Assistance AI chatbot as self-learning project.",
                     "Building a real-time Human Resources platform as a university project.",
                     "learning all the essentials skills"
                 ]
