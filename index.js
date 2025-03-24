@@ -100,20 +100,20 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         if (!formData.user_name || !formData.user_email || !formData.message) {
-            alert("⚠ Please fill out all fields before sending.");
+            alert("Please fill out all fields before sending.");
             return;
         }
 
         // Send email using EmailJS
         emailjs.send("service_yk6pvxq", "template_8b86jse", formData)
             .then(response => {
-                console.log("✅ SUCCESS:", response);
-                alert("📩 Your message has been sent successfully!");
+                console.log("SUCCESS:", response);
+                alert("Your message has been sent successfully!");
                 document.getElementById("contact-form").reset(); // Clear the form
             })
             .catch(error => {
-                console.error("❌ ERROR:", error);
-                alert("⚠ Failed to send message. Please try again later.");
+                console.error("ERROR:", error);
+                alert("⚠Failed to send message. Please try again later.");
             });
     });
 });
@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const mobileNav = document.createElement("div");
     mobileNav.classList.add("mobile-nav");
+    mobileNav.style.display = "none"; // Ensure it starts hidden
     mobileNav.innerHTML = `
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -143,11 +144,20 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(hamburger);
     document.body.appendChild(mobileNav);
 
-    // Ensure click event works
+    // Toggle menu visibility
     hamburger.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevent clicks from being blocked
+        event.stopPropagation();
         hamburger.classList.toggle("active");
         mobileNav.classList.toggle("active");
+
+        // Handle display properly
+        if (mobileNav.classList.contains("active")) {
+            mobileNav.style.display = "flex";
+            setTimeout(() => mobileNav.style.opacity = "1", 50); // Fade-in effect
+        } else {
+            mobileNav.style.opacity = "0"; // Fade-out effect
+            setTimeout(() => mobileNav.style.display = "none", 500); // Delay hiding
+        }
     });
 
     // Close menu when clicking outside
@@ -155,9 +165,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!hamburger.contains(event.target) && !mobileNav.contains(event.target)) {
             hamburger.classList.remove("active");
             mobileNav.classList.remove("active");
+            mobileNav.style.opacity = "0";
+            setTimeout(() => mobileNav.style.display = "none", 500); // Hide after transition
         }
     });
 });
+
 
 
 

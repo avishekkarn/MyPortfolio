@@ -1,14 +1,14 @@
-/* 🌟 Responsive Styles for Mobile Screens */
+/*Responsive Styles for Mobile Screens */
 @media screen and (max-width: 768px) {
 
-    /* ✅ Make Sure Everything Stays Within Viewport */
+    
     html, body {
         overflow-x: hidden;  /* Prevent horizontal scrolling */
         width: 100vw;
         max-width: 100vw;
     }
 
-    /* ✅ Remove Extra Margins & Ensure Full-Width Sections */
+   
     section, .main, .cv-section, .about-me, .education {
         width: 100vw;  
         max-width: 100vw;
@@ -17,7 +17,7 @@
         box-sizing: border-box;
     }
 
-    /* ✅ Ensure Container Fits Properly */
+    
     .container {
         width: 100vw;
         max-width: 100vw;
@@ -25,7 +25,7 @@
         margin: 0 auto;
     }
 
-    /* ✅ Navbar Adjustments */
+    /*Navbar Adjustments */
     .navbar {
         width: 100vw;
         max-width: 100vw;
@@ -37,13 +37,12 @@
         background: rgba(34, 34, 34, 0.9);
     }
 
-    /* ✅ Hide Default Navbar Links */
+    /* Hide Default Navbar Links */
     .navbar-links {
         display: none;
     }
 
-    /* ✅ Hamburger Menu */
-    /* ✅ Default Hamburger Button */
+    /* Hamburger Menu */
     .hamburger {
         display: flex;
         flex-direction: column;
@@ -61,7 +60,7 @@
         transition: transform 0.3s ease-in-out;
     }
 
-    /* ✅ Hamburger Bars */
+    /*Hamburger Bars */
     .hamburger .bar {
         width: 30px;
         height: 4px;
@@ -69,7 +68,7 @@
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
-    /* ✅ Transform Hamburger to Cross */
+    /*Transform Hamburger to Cross */
     .hamburger.active .bar:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -90,13 +89,12 @@
         transition: 0.3s;
     }
 
-    /* ✅ Mobile Navigation Panel */
+    /* Mobile Navigation Panel */
     .mobile-nav {
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
-        max-width: 100vw;
         height: 100vh;
         background: rgba(0, 0, 0, 0.95);
         display: flex;
@@ -104,16 +102,18 @@
         justify-content: center;
         align-items: center;
         transform: translateY(-100%);
-        transition: transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         z-index: 1050;
+        opacity: 0;
     }
 
-    /* ✅ Show Menu When Active */
+    /* Show Menu When Active */
     .mobile-nav.active {
         transform: translateY(0);
+        opacity: 1;
     }
 
-    /* ✅ Mobile Nav Links */
+    /* Mobile Nav Links */
     .mobile-nav a {
         color: white;
         font-size: 1.8em;
@@ -124,14 +124,32 @@
         transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
 
-    /* ✅ One-by-One Link Animation */
+    /* Animate links on menu open */
+    .mobile-nav.active a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /*Mobile Nav Links */
+    .mobile-nav a {
+        color: white;
+        font-size: 1.8em;
+        text-decoration: none;
+        padding: 15px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    /*One-by-One Link Animation */
     .mobile-nav.active a:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
     .mobile-nav.active a:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
     .mobile-nav.active a:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
     .mobile-nav.active a:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
     .mobile-nav.active a:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
 
-    /* ✅ Ensure Main Section is Full Width */
+    /* Ensure Main Section is Full Width */
     .main {
         display: flex;
         flex-direction: column;
@@ -140,7 +158,7 @@
         max-width: 100vw;
     }
 
-    /* ✅ Fix Left & Right Sections */
+    /*Fix Left & Right Sections */
     .left-content, .right-content {
         width: 100vw;
         text-align: center;
@@ -153,31 +171,29 @@
         max-width: 350px;
     }
 
-    /* ✅ Reduce CV Section Height */
+    /*Reduce CV Section Height */
     .cv-section {
-        height: auto;  /* Make height adjust dynamically */
-        padding: 15px 20px;  /* Reduce top & bottom padding */
+        height: auto;  
+        padding: 15px 20px;  
         text-align: center;
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.1);
     }
 
-    /* ✅ Ensure Buttons Stay in Place */
     .cv-buttons {
         display: flex;
-        flex-direction: row; /* Stack buttons vertically */
+        flex-direction: row; 
         align-items: center;
-        gap: 8px; /* Reduce space between buttons */
+        gap: 8px; 
     }
 
-    /* ✅ Adjust Button Styling */
+    
     .cv-btn {
-        padding: 10px 20px; /* Reduce padding */
-        font-size: 14px; /* Slightly reduce text size */
+        padding: 10px 20px; 
+        font-size: 14px;
     }
 
 
-    /* ✅ About Me Section */
-    /* ✅ Fix About Me Section */
+    /*About Me Section */
     .about-me {
         width: 100%;
         max-width: 100vw;
@@ -214,9 +230,6 @@
         margin: 0 auto;
         max-width: 100%;
     }
-
-    /* ✅ Fix Timeline Layout to Prevent Overflow */
-    /* ✅ Fix Timeline Layout - Ensure a Perfect Single Column */
     .education {
         text-align: center;
         padding: 0;
@@ -224,7 +237,7 @@
         max-width: 100vw;
     }
 
-    /* ✅ Force Timeline into a Single Column */
+    /*Force Timeline into a Single Column */
     .timeline {
         display: flex;
         flex-direction: column;
@@ -234,12 +247,12 @@
         padding: 0;
     }
 
-    /* ✅ Remove the Center Vertical Line */
+    /*Remove the Center Vertical Line */
     .timeline::before {
         display: none;
     }
 
-    /* ✅ Ensure Timeline Items Are Centered */
+    /*Ensure Timeline Items Are Centered */
     .timeline-item {
         width: 85%;  /* Make sure they fit the screen */
         text-align: center;
@@ -248,26 +261,26 @@
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.1);
     }
 
-    /* ✅ Remove Left & Right Offsets for Proper Center Alignment */
+    /*Remove Left & Right Offsets for Proper Center Alignment */
     .timeline-item.left, 
     .timeline-item.right {
         left: 0 !important;   /* Remove any shifting */
         transform: none !important;
     }
 
-    /* ✅ Position Circle Indicators in the Center */
+    /*Position Circle Indicators in the Center */
     .timeline-item::before {
         left: 50%;
         transform: translateX(-50%);
     }
 
-    /* ✅ Remove Timeline Circles on Mobile */
+    /*Remove Timeline Circles on Mobile */
     .timeline-item::before {
         display: none !important;  /* Hides the circles */
     }
 
 
-    /* ✅ Ensure Certifications Section Fits Screen */
+    /*Ensure Certifications Section Fits Screen */
     .certifications {
         width: 100%;
         text-align: center;
@@ -275,7 +288,7 @@
         position: relative;
     }
 
-    /* ✅ Ensure Wrapper Does Not Overflow */
+    /*Ensure Wrapper Does Not Overflow */
     .certificates-wrapper {
         display: flex;
         overflow-x: auto; /* Allow horizontal scroll */
@@ -285,7 +298,7 @@
         scrollbar-width: none; /* Hide scrollbar */
     }
 
-    /* ✅ Ensure Buttons Are Visible */
+    /*Ensure Buttons Are Visible */
     .scroll-btn {
         position: absolute;
         top: 50%;
@@ -302,7 +315,7 @@
         z-index: 10;  /* Make sure buttons are on top */
     }
 
-    /* ✅ Positioning Left & Right Scroll Buttons */
+    /*Positioning Left & Right Scroll Buttons */
     .left-btn {
         left: 5px; /* Move button closer to certificates */
     }
@@ -311,13 +324,13 @@
         right: 5px; /* Move button closer to certificates */
     }
 
-    /* ✅ Ensure Buttons Remain Clickable */
+    /*Ensure Buttons Remain Clickable */
     .scroll-btn:active {
         transform: scale(0.95);
         background: rgba(255, 255, 255, 0.5);
     }
 
-    /* ✅ Fix Certificate Preview Modal */
+    /*Fix Certificate Preview Modal */
     #certificate-modal {
         display: none;
         position: fixed;
@@ -333,7 +346,7 @@
         padding: 20px; /* Prevent overflow */
     }
 
-    /* ✅ Ensure Modal Content Scales on Mobile */
+    /*Ensure Modal Content Scales on Mobile */
     #certificate-modal .modal-content {
         background: white;
         padding: 5px;
@@ -344,7 +357,7 @@
         overflow: hidden;
     }
 
-    /* ✅ Ensure Certificate Image Scales Correctly */
+    /*Ensure Certificate Image Scales Correctly */
     #certificate-modal img {
         width: 100%;
         height: auto;
@@ -352,7 +365,7 @@
         border-radius: 5px;
     }
 
-    /* ✅ Adjust Close Button */
+    /*Adjust Close Button */
     .close {
         position: absolute;
         top: 10px;

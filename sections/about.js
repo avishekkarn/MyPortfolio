@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("📌 Script Loaded: Fixing Black Screen Issue...");
+    console.log("Script Loaded: Fixing Black Screen Issue...");
 
-    // 🛠 **Fix Black Screen Issue - Ensure All Modals Are Hidden Properly**
+    
     setTimeout(() => {
         document.querySelectorAll(".modal").forEach(modal => {
-            modal.style.opacity = "0"; // Ensure modal is invisible
-            modal.style.display = "none"; // Hide all modals explicitly
+            modal.style.opacity = "0"; 
+            modal.style.display = "none"; 
             modal.classList.remove("show-popup");
         });
-    }, 200); // Delay to ensure DOM is fully loaded before hiding modals
+    }, 200); 
 
-    // 🏫 Open Education Modal
+    // Open Education Modal
     window.openModal = function (type) {
         const modal = document.getElementById("modal");
         const title = document.getElementById("modal-title");
         const description = document.getElementById("modal-description");
         const image = document.getElementById("modal-image");
-        const extraDetails = document.getElementById("modal-extra-details"); // 🆕 Extra details container
+        const extraDetails = document.getElementById("modal-extra-details"); //Extra details container
 
         const details = {
             school: {
@@ -70,12 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (details[type]) {
             const edu = details[type];
 
-            // ✅ Update Basic Information
+            //Update Basic Information
             title.textContent = edu.title;
             description.textContent = edu.description;
             image.src = edu.image;
 
-            // ✅ Update Extra Details
+            //Update Extra Details
             extraDetails.innerHTML = `
                 <p><strong> Location:</strong> ${edu.location}</p>
                 <p><strong> Mode of Instruction:</strong> ${edu.modeOfInstruction}</p>
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </ul>
             `;
 
-            // ✅ Show Modal with Smooth Animation
+            //Show Modal with Smooth Animation
             modal.style.display = "flex";
             setTimeout(() => {
                 modal.classList.add("show-popup");
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    // ❌ Close Education Modal
+    //Close Education Modal
     window.closeModal = function () {
         const modal = document.getElementById("modal");
         modal.classList.remove("show-popup");
@@ -109,20 +109,20 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
 
-    // 🏆 Open Certificate Preview
+    //Open Certificate Preview
     window.openCertificate = function (imageSrc) {
         const modal = document.getElementById("certificate-modal");
         const img = document.getElementById("certificate-img");
 
         if (!modal || !img) {
-            console.error("❌ ERROR: Modal or Image element not found!");
+            console.error("ERROR: Modal or Image element not found!");
             return;
         }
 
         // Ensure the path correctly points to the root folder
         let fixedSrc = imageSrc.startsWith("/") ? imageSrc : `/${imageSrc.split('/').pop()}`;
 
-        console.log("📸 Opening Certificate:", fixedSrc);
+        console.log("Opening Certificate:", fixedSrc);
 
         img.onload = function () { 
             modal.style.display = "flex";
@@ -133,13 +133,13 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         img.onerror = function () {
-            console.error("⚠ ERROR: Image failed to load:", fixedSrc);
+            console.error("ERROR: Image failed to load:", fixedSrc);
         };
 
         img.src = fixedSrc;
     };
 
-    // 🏆 Close Certificate Preview
+    //Close Certificate Preview
     window.closeCertificate = function () {
         const modal = document.getElementById("certificate-modal");
         if (modal) {
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
 
-    // 🛑 Close modals when clicking outside
+    //Close modals when clicking outside
     document.querySelectorAll(".modal").forEach(modal => {
         modal.addEventListener("click", event => {
             if (event.target === modal) {
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ⌨ Close modals on pressing ESC key
+    //Close modals on pressing ESC key
     document.addEventListener("keydown", function (event) {
         if (event.key === "Escape") {
             if (typeof window.closeModal === "function") window.closeModal();
@@ -170,9 +170,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // ✅ Hide inactive modals on page load (Final Fix)
+    //Hide inactive modals on page load (Final Fix)
     window.addEventListener("load", function () {
-        console.log("✅ Hiding all inactive modals on page load...");
+        console.log("Hiding all inactive modals on page load...");
         document.querySelectorAll(".modal").forEach(modal => {
             modal.style.display = "none";
             modal.style.opacity = "0";
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // ✅ **Smooth Scrolling for Navbar Links**
+    //Smooth Scrolling for Navbar Links
     document.querySelectorAll(".navbar-links a").forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    /* ✅ **Timeline Animation - Smooth One by One Sliding** */
+    //Timeline Animation - Smooth One by One Sliding
     function handleTimelineScroll() {
         const timelineItems = document.querySelectorAll(".timeline-item");
         let delay = 0; // Delay for staggered effect
@@ -222,13 +222,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("📌 Script Loaded: Fixing Certificate Scrolling...");
+    console.log("Script Loaded: Fixing Certificate Scrolling...");
 
     function scrollCertificates(direction) {
         const container = document.getElementById("certificates-container");
 
         if (!container) {
-            console.error("❌ ERROR: certificates-container not found!");
+            console.error("ERROR: certificates-container not found!");
             return;
         }
 
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             setTimeout(() => {
                 if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
-                    console.log("🔄 Moving First Item to End");
+                    console.log("Moving First Item to End");
                     let firstItem = container.firstElementChild;
                     container.appendChild(firstItem);
                     container.scrollLeft -= firstItem.clientWidth + 20;
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             setTimeout(() => {
                 if (container.scrollLeft <= 10) {
-                    console.log("🔄 Moving Last Item to Start");
+                    console.log("Moving Last Item to Start");
                     let lastItem = container.lastElementChild;
                     container.prepend(lastItem);
                     container.scrollLeft += lastItem.clientWidth + 20;
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Attach the function globally so HTML buttons can call it
+    
     window.scrollCertificates = scrollCertificates;
 });
 

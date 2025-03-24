@@ -45,9 +45,6 @@
 
 
 /* Timeline Container */
-/* Timeline Main Container */
-/* Timeline Main Container */
-/* Timeline Main Container */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -55,7 +52,7 @@
     padding: 20px 0;
 }
 
-/* 🔗 Vertical Connecting Line (No Change Here) */
+/*Vertical Connecting Line (No Change Here) */
 .timeline::before {
     content: "";
     position: absolute;
@@ -100,7 +97,7 @@
     transform: translatex(-200px);
 }
 
-/* 🛠 Fix Connector Circle (Now Aligned Properly) */
+/*Fix Connector Circle (Now Aligned Properly) */
 .timeline-item::before {
     content: "";
     position: absolute;
@@ -114,19 +111,19 @@
     z-index: 2;
 }
 
-/* ✅ Left Side: Ensure Circle Touches the Line */
+/*Left Side: Ensure Circle Touches the Line */
 .timeline-item.left::before {
     right: -10px; /* Adjusted to match the new box position */
     left: auto;
 }
 
-/* ✅ Right Side: Ensure Circle Touches the Line */
+/*Right Side: Ensure Circle Touches the Line */
 .timeline-item.right::before {
     left: -10px; /* Keeps right-side circles aligned properly */
     right: auto;
 }
 
-/* ✨ Improved Hover Effect */
+/*Improved Hover Effect */
 .timeline-item:hover {
     transform: translateY(-5px);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15), -10px -10px 20px rgba(255, 255, 255, 0.8);
@@ -202,7 +199,6 @@
 }
 
 /* Interests & Hobbies Grid */
-/* Interests Section - Elegant & Styled */
 .interests-wrapper {
     display: flex;
     justify-content: center;
@@ -214,7 +210,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: auto; /* Restrict width to avoid full spread */
+    width: auto;
 }
 
 .section-title {
@@ -222,7 +218,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center; /* Centers the text */
+    text-align: center; 
     color: #161515;
     position: relative;
     margin-bottom: 30px;
@@ -236,7 +232,7 @@
     width: 70px;
     height: 4px;
     background: linear-gradient(to right, #2c271f, #161515);
-    margin: 10px auto; /* Ensures underline is centered */
+    margin: 10px auto; 
     border-radius: 2px;
 }
 
@@ -249,16 +245,15 @@
 
 /* Interest Box */
 .interest-item {
-    /* Soft glass effect */
     color: #000000;
-    font-size: 20px; /* Improved font size */
-    font-family: "Poppins", sans-serif; /* Clean & professional font */
+    font-size: 20px; 
+    font-family: "Poppins", sans-serif; 
     font-weight: 600;
     padding: 15px 30px;
     
     transition: all 0.4s ease-in-out;
     text-align: center;
-    width: auto; /* Keeps box width dynamic based on content */
+    width: auto;
     position: relative;
     overflow: hidden;
 }
@@ -284,15 +279,10 @@
 }
 
 .interest-item:hover::after {
-    width: 100%; /* Now perfectly matches the text width */
+    width: 100%;
     left: 50%;
 }
 
-
-
-
-
-/* Certifications Showcase */
 /* Certifications Section */
 .certifications {
     margin-top: 40px;
@@ -309,7 +299,7 @@
     scroll-behavior: smooth;
     gap: 20px;
     padding: 10px 0;
-    scrollbar-width: none; /* Hide scrollbar for better aesthetics */
+    scrollbar-width: none;
 }
 
 /* Hide Scrollbar for WebKit Browsers */
@@ -341,12 +331,12 @@
     border-radius: 5px;
 }
 
-/* Scroll Buttons - Unique Modern Look */
+/* Scroll Buttons*/
 .scroll-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.1); /* Soft glass effect */
+    background: rgba(255, 255, 255, 0.1); 
     color: #ffffff;
     border: none;
     cursor: pointer;
